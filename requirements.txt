@@ -1,0 +1,13 @@
+behave
+selenium
+pylint
+flake8
+dotenv
+requests
+beautifulsoup4
+pytest
+allure-pytest
+loguru
+pytest-xdist
+coverage
+allure-behave
