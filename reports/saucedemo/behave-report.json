@@ -1,0 +1,178 @@
+[
+{
+  "description": [
+    "As a Swag Labs shopper",
+    "I want to complete a purchase with multiple items",
+    "So that I can validate the end-to-end checkout flow"
+  ],
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "projects/saucedemo/features/saucedemo_inventory.feature:7",
+      "name": "Complete checkout with four inventory items",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/saucedemo/features/saucedemo_inventory.feature:8",
+          "match": {
+            "arguments": [],
+            "location": "projects/saucedemo/features/steps/saucedemo_steps.py:22"
+          },
+          "name": "a Saucedemo user opens the login page",
+          "result": {
+            "duration": 41.37849760055542,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/saucedemo/features/saucedemo_inventory.feature:9",
+          "match": {
+            "arguments": [],
+            "location": "projects/saucedemo/features/steps/saucedemo_steps.py:30"
+          },
+          "name": "the user signs in with standard credentials",
+          "result": {
+            "duration": 6.929846286773682,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/saucedemo/features/saucedemo_inventory.feature:10",
+          "match": {
+            "arguments": [],
+            "location": "projects/saucedemo/features/steps/saucedemo_steps.py:42"
+          },
+          "name": "the user adds the following items to the cart:",
+          "result": {
+            "duration": 4.5908203125,
+            "status": "passed"
+          },
+          "step_type": "when",
+          "table": {
+            "headings": [
+              "item"
+            ],
+            "rows": [
+              [
+                "Sauce Labs Backpack"
+              ],
+              [
+                "Sauce Labs Bolt T-Shirt"
+              ],
+              [
+                "Sauce Labs Onesie"
+              ],
+              [
+                "Sauce Labs Bike Light"
+              ]
+            ]
+          }
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/saucedemo/features/saucedemo_inventory.feature:16",
+          "match": {
+            "arguments": [
+              {
+                "name": "count",
+                "value": "4"
+              }
+            ],
+            "location": "projects/saucedemo/features/steps/saucedemo_steps.py:51"
+          },
+          "name": "the cart badge should display \"4\"",
+          "result": {
+            "duration": 3.0877320766448975,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/saucedemo/features/saucedemo_inventory.feature:17",
+          "match": {
+            "arguments": [],
+            "location": "projects/saucedemo/features/steps/saucedemo_steps.py:60"
+          },
+          "name": "the user opens the cart",
+          "result": {
+            "duration": 3.3450498580932617,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/saucedemo/features/saucedemo_inventory.feature:18",
+          "match": {
+            "arguments": [],
+            "location": "projects/saucedemo/features/steps/saucedemo_steps.py:67"
+          },
+          "name": "the user proceeds to checkout",
+          "result": {
+            "duration": 3.2932138442993164,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/saucedemo/features/saucedemo_inventory.feature:19",
+          "match": {
+            "arguments": [],
+            "location": "projects/saucedemo/features/steps/saucedemo_steps.py:74"
+          },
+          "name": "the user submits checkout information:",
+          "result": {
+            "duration": 3.976954460144043,
+            "status": "passed"
+          },
+          "step_type": "then",
+          "table": {
+            "headings": [
+              "first_name",
+              "last_name",
+              "postal_code"
+            ],
+            "rows": [
+              [
+                "Akash",
+                "Rathod",
+                "445303"
+              ]
+            ]
+          }
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/saucedemo/features/saucedemo_inventory.feature:22",
+          "match": {
+            "arguments": [],
+            "location": "projects/saucedemo/features/steps/saucedemo_steps.py:85"
+          },
+          "name": "the order should complete successfully",
+          "result": {
+            "duration": 9.821615934371948,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "project:saucedemo"
+      ],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "projects/saucedemo/features/saucedemo_inventory.feature:1",
+  "name": "Saucedemo checkout smoke",
+  "status": "passed",
+  "tags": []
+}
+]

@@ -1,0 +1,13 @@
+Python PROJECT
+
+
+
+Sauce Labs :
+
+Run the scripts : 
+
+python tests/test_runner.py --project saucedemo
+
+
+ReRun This 
+python tests/test_runner.py --project saucedemo

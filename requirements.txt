@@ -10,4 +10,11 @@ allure-pytest
 loguru
 pytest-xdist
 coverage
+Pillow
+axe-selenium-python
 allure-behave
+numpy
+opencv-python
+pandas
+scikit-learn
+openai

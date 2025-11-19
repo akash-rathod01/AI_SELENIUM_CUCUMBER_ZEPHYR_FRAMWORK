@@ -1,0 +1,202 @@
+[
+  {
+    "run_id": "20251119111141",
+    "timestamp": "2025-11-19T11:11:41.001957",
+    "duration": 0.0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119111339",
+    "timestamp": "2025-11-19T11:13:39.916782",
+    "duration": 29.17,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119111454",
+    "timestamp": "2025-11-19T11:14:54.798399",
+    "duration": 23.86,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119111701",
+    "timestamp": "2025-11-19T11:17:01.781421",
+    "duration": 6.53,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119111736",
+    "timestamp": "2025-11-19T11:17:36.194811",
+    "duration": 6.92,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119111815",
+    "timestamp": "2025-11-19T11:18:15.262987",
+    "duration": 6.43,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119112531",
+    "timestamp": "2025-11-19T11:25:31.203576",
+    "duration": 22.79,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119112916",
+    "timestamp": "2025-11-19T11:29:16.241260",
+    "duration": 22.65,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119113926",
+    "timestamp": "2025-11-19T11:39:26.336526",
+    "duration": 31.41,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119115629",
+    "timestamp": "2025-11-19T11:56:29.804318",
+    "duration": 22.77,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119115739",
+    "timestamp": "2025-11-19T11:57:39.110012",
+    "duration": 22.9,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119115819",
+    "timestamp": "2025-11-19T11:58:19.153444",
+    "duration": 22.12,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119120311",
+    "timestamp": "2025-11-19T12:03:11.013291",
+    "duration": 22.21,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119121206",
+    "timestamp": "2025-11-19T12:12:06.134093",
+    "duration": 25.45,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119123421",
+    "timestamp": "2025-11-19T12:34:21.676688",
+    "duration": 26.03,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119123633",
+    "timestamp": "2025-11-19T12:36:33.563710",
+    "duration": 8.86,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119123824",
+    "timestamp": "2025-11-19T12:38:24.117485",
+    "duration": 25.36,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119124050",
+    "timestamp": "2025-11-19T12:40:50.730457",
+    "duration": 47.85,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119124221",
+    "timestamp": "2025-11-19T12:42:21.607129",
+    "duration": 50.77,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251119144702",
+    "timestamp": "2025-11-19T14:47:02.873991",
+    "duration": 76.42,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  }
+]
