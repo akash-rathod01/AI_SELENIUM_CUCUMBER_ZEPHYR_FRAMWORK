@@ -61,10 +61,10 @@ class NLPTestGenerator:
 		if use_llm:
 			try:
 				scenarios = self._generate_with_llm(requirement)
-				logger.info("Generated scenarios via LLM", requirement=requirement)
+				logger.info(f"Generated scenarios via LLM for requirement: {requirement}")
 				return scenarios
 			except Exception as exc:  # pragma: no cover - network failure path
-				logger.warning("LLM generation failed; using heuristic fallback", error=str(exc))
+				logger.warning(f"LLM generation failed; using heuristic fallback. Error: {exc}")
 
 		return self._heuristic_generation(requirement)
 

@@ -1,0 +1,87 @@
+{
+  "generated_at": "2025-12-05T16:40:46.547397Z",
+  "project": "auto_completion_projcet",
+  "run_summary": {
+    "generated_at": "2025-12-05T16:40:01.658588",
+    "total_features": 3,
+    "total_scenarios": 45,
+    "duration_seconds": 356.68,
+    "scenarios": {
+      "passed": 33,
+      "failed": 3,
+      "skipped": 9
+    },
+    "steps": {
+      "passed": 173,
+      "failed": 3,
+      "skipped": 23
+    },
+    "failed_scenarios": [
+      {
+        "feature": "DoTestHere.com - Complete Module Testing Coverage",
+        "name": "Login with valid credentials",
+        "status": "failed"
+      },
+      {
+        "feature": "DoTestHere.com - Complete Module Testing Coverage",
+        "name": "Sort table by Last Name",
+        "status": "failed"
+      },
+      {
+        "feature": "DoTestHere.com - Complete Module Testing Coverage",
+        "name": "Sort table by First Name",
+        "status": "failed"
+      }
+    ],
+    "return_code": 1,
+    "project": "auto_completion_projcet",
+    "project_name": "Auto Completion Project"
+  },
+  "anomaly_candidates": [],
+  "flaky_tests": [],
+  "retry_recommendations": [],
+  "locator_health": [],
+  "link_diagnostics": {
+    "https://dotesthere.com": {
+      "broken_links": {},
+      "errors": {},
+      "statistics": {
+        "pages_scanned": 4,
+        "forms_detected": 8,
+        "broken_link_count": 0,
+        "max_depth_reached": 1,
+        "unique_domains": [
+          "dotesthere.com"
+        ],
+        "average_links_per_page": 3.75
+      }
+    },
+    "https://the-internet.herokuapp.com": {
+      "broken_links": {
+        "https://the-internet.herokuapp.com/basic_auth": 401,
+        "https://the-internet.herokuapp.com/digest_auth": 401,
+        "https://the-internet.herokuapp.com/download_secure": 401
+      },
+      "errors": {},
+      "statistics": {
+        "pages_scanned": 42,
+        "forms_detected": 7,
+        "broken_link_count": 3,
+        "max_depth_reached": 1,
+        "unique_domains": [
+          "the-internet.herokuapp.com"
+        ],
+        "average_links_per_page": 4.95
+      }
+    }
+  },
+  "snapshot": "D:\\VisualStudio_Projects\\ai_selenium_CucumberBDD_Zephyr_framework\\snapshots\\20251205_164026_auto_completion_projcet_post_run.zip",
+  "flake_triage": {
+    "report_path": "D:\\VisualStudio_Projects\\ai_selenium_CucumberBDD_Zephyr_framework\\reports\\maintenance\\flake_triage\\flake_triage_20251205_164046.json",
+    "markdown_path": "D:\\VisualStudio_Projects\\ai_selenium_CucumberBDD_Zephyr_framework\\reports\\maintenance\\flake_triage\\flake_triage_20251205_164046.md",
+    "classification_tally": {
+      "assertion_mismatch": 3
+    },
+    "failure_count": 3
+  }
+}

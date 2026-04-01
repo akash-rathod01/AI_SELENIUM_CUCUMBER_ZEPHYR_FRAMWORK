@@ -49,7 +49,7 @@ class VisualComparator:
 	def compare(self, baseline: Path, actual: Path) -> VisualDiffResult:
 		if Image is None:
 			raise RuntimeError("Pillow is required for visual comparison; install pillow package")
-		logger.info("Running visual comparison", baseline=str(baseline), actual=str(actual))
+		logger.info(f"Running visual comparison: baseline={baseline}, actual={actual}")
 		base_img = Image.open(baseline).convert("RGB")
 		actual_img = Image.open(actual).convert("RGB")
 
@@ -82,9 +82,9 @@ class VisualComparator:
 		)
 
 		if result.threshold_exceeded:
-			logger.warning("Visual diff threshold exceeded", metrics=metadata)
+			logger.warning(f"Visual diff threshold exceeded: {metadata}")
 		else:
-			logger.info("Visual diff within threshold", metrics=metadata)
+			logger.info(f"Visual diff within threshold: {metadata}")
 
 		return result
 

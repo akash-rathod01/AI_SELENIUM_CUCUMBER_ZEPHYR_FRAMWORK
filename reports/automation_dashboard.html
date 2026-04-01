@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Automation Quality Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f5f8;
+      --panel: #ffffff;
+      --accent: #1f5eff;
+      --accent-soft: rgba(31, 94, 255, 0.1);
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 32px;
+      background: var(--bg);
+      color: var(--text);
+    }
+    h1 {
+      font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+      margin-bottom: 4px;
+    }
+    .subhead {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+      border: 1px solid var(--border);
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin: 12px 0 24px;
+    }
+    .metric {
+      padding: 16px;
+      border-radius: 14px;
+      background: var(--accent-soft);
+    }
+    .metric h3 {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .metric .value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 8px;
+      color: var(--accent);
+    }
+    .status-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .status-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.7);
+    }
+    .status-list li span:first-child {
+      font-weight: 600;
+    }
+    .progress-track {
+      background: var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+      height: 12px;
+      margin-top: 8px;
+    }
+    .progress-bar {
+      height: 100%;
+      background: var(--accent);
+      width: 0;
+      transition: width 0.6s ease;
+    }
+    table.schedule {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    table.schedule th, table.schedule td {
+      padding: 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    table.schedule th {
+      background: #eef1ff;
+    }
+    .muted {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .chart-wrap {
+      position: relative;
+      height: 260px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Automated Functional Testing Dashboard</h1>
+    <p class="subhead">Live view of automation KPIs blended with manual execution progress. Last updated <span id="generatedAt"></span>.</p>
+  </header>
+
+  <section class="metric-grid" id="headlineMetrics"></section>
+
+  <section class="layout">
+    <div class="card">
+      <h2>Latest automation run</h2>
+      <canvas id="latestRunChart"></canvas>
+      <ul class="status-list" id="latestRunMeta"></ul>
+    </div>
+
+    <div class="card">
+      <h2>Coverage snapshot</h2>
+      <div>
+        <h3>Automated tests</h3>
+        <div class="progress-track"><div class="progress-bar" id="autoProgress"></div></div>
+        <p class="muted" id="autoCoverageLabel"></p>
+      </div>
+      <div style="margin-top:24px;">
+        <h3>Manual tests</h3>
+        <div class="progress-track"><div class="progress-bar" id="manualProgress" style="background:#48a145;"></div></div>
+        <p class="muted" id="manualCoverageLabel"></p>
+      </div>
+    </div>
+
+    <div class="card" style="grid-column: 1 / -1;">
+      <h2>Recent runs timeline</h2>
+      <div class="chart-wrap">
+        <canvas id="recentRunsChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card" style="grid-column: 1 / -1;">
+      <h2>Execution schedule</h2>
+      <table class="schedule" id="scheduleTable"></table>
+    </div>
+  </section>
+
+  <script>
+    const data = {
+  "generated_at": "2025-11-25T03:18:08.720197",
+  "latest_run": {
+    "run_id": "20251124202419",
+    "timestamp": "2025-11-24T20:24:19.167520",
+    "project": "saucedemo",
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "total": 4,
+    "duration": 41.11
+  },
+  "latest_runs": [
+    {
+      "run_id": "20251124202419",
+      "timestamp": "2025-11-24T20:24:19.167520",
+      "project": "saucedemo",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "total": 4,
+      "duration": 41.11
+    },
+    {
+      "run_id": "20251124202145",
+      "timestamp": "2025-11-24T20:21:45.121505",
+      "project": "saucedemo",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "total": 4,
+      "duration": 42.04
+    },
+    {
+      "run_id": "20251124190842",
+      "timestamp": "2025-11-24T19:08:42.836353",
+      "project": "saucedemo",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "total": 4,
+      "duration": 49.64
+    },
+    {
+      "run_id": "20251124190551",
+      "timestamp": "2025-11-24T19:05:51.555604",
+      "project": "saucedemo",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "total": 4,
+      "duration": 48.72
+    },
+    {
+      "run_id": "20251124190207",
+      "timestamp": "2025-11-24T19:02:07.840920",
+      "project": "saucedemo",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "total": 4,
+      "duration": 47.47
+    },
+    {
+      "run_id": "20251124162513",
+      "timestamp": "2025-11-24T16:25:13.925643",
+      "project": "saucedemo",
+      "passed": 1,
+      "failed": 1,
+      "skipped": 2,
+      "total": 4,
+      "duration": 68.33
+    },
+    {
+      "run_id": "20251124162031",
+      "timestamp": "2025-11-24T16:20:31.484712",
+      "project": "saucedemo",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "total": 1,
+      "duration": 71.91
+    },
+    {
+      "run_id": "20251122153553",
+      "timestamp": "2025-11-22T15:35:53.134346",
+      "project": "auto_completion_projcet",
+      "passed": 23,
+      "failed": 1,
+      "skipped": 21,
+      "total": 45,
+      "duration": 299.97
+    }
+  ],
+  "automated_totals": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0
+  },
+  "manual_totals": {
+    "pending": 10,
+    "finished": 2,
+    "total": 12
+  },
+  "schedule": [
+    {
+      "label": "Tuesday",
+      "date": "Nov 25",
+      "runs": [
+        "Hourly 02",
+        "Hourly 02",
+        "Hourly 02"
+      ]
+    },
+    {
+      "label": "Wednesday",
+      "date": "Nov 26",
+      "runs": [
+        "Hourly 02",
+        "Hourly 02",
+        "Hourly 02"
+      ]
+    },
+    {
+      "label": "Thursday",
+      "date": "Nov 27",
+      "runs": [
+        "Hourly 02",
+        "Hourly 02",
+        "Hourly 02"
+      ]
+    },
+    {
+      "label": "Friday",
+      "date": "Nov 28",
+      "runs": [
+        "Hourly 02",
+        "Hourly 02",
+        "Hourly 02"
+      ]
+    },
+    {
+      "label": "Saturday",
+      "date": "Nov 29",
+      "runs": [
+        "Hourly 02",
+        "Hourly 02",
+        "Hourly 02"
+      ]
+    },
+    {
+      "label": "Sunday",
+      "date": "Nov 30",
+      "runs": [
+        "Hourly 02",
+        "Hourly 02",
+        "Hourly 02"
+      ]
+    },
+    {
+      "label": "Monday",
+      "date": "Dec 01",
+      "runs": [
+        "Hourly 02",
+        "Hourly 02",
+        "Hourly 02"
+      ]
+    }
+  ]
+};
+    const formatNumber = (value) => new Intl.NumberFormat().format(value);
+
+    const metrics = [
+      { label: 'Total', value: data.automated_totals.total },
+      { label: 'Passed', value: data.automated_totals.passed },
+      { label: 'Failed', value: data.automated_totals.failed },
+      { label: 'Not Executed', value: data.automated_totals.skipped },
+    ];
+
+    document.getElementById('generatedAt').textContent = new Date(data.generated_at).toLocaleString();
+
+    const metricsContainer = document.getElementById('headlineMetrics');
+    metrics.forEach(metric => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'metric';
+      wrapper.innerHTML = `<h3>${metric.label}</h3><div class="value">${formatNumber(metric.value)}</div>`;
+      metricsContainer.appendChild(wrapper);
+    });
+
+    if (data.latest_runs.length) {
+      const latest = data.latest_runs[0];
+      const metaList = document.getElementById('latestRunMeta');
+      const items = [
+        ['Project', latest.project],
+        ['Duration', `${latest.duration.toFixed(1)} s`],
+        ['Run ID', latest.run_id],
+        ['Timestamp', new Date(latest.timestamp || data.generated_at).toLocaleString()],
+      ];
+      items.forEach(([label, value]) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span>${label}</span><span>${value}</span>`;
+        metaList.appendChild(li);
+      });
+
+      const latestCtx = document.getElementById('latestRunChart');
+      new Chart(latestCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Passed', 'Failed', 'Skipped'],
+          datasets: [{
+            data: [latest.passed, latest.failed, latest.skipped],
+            backgroundColor: ['#2563eb', '#ef4444', '#f59e0b'],
+          }],
+        },
+        options: {
+          plugins: { legend: { position: 'bottom' } },
+        },
+      });
+
+      const historyCtx = document.getElementById('recentRunsChart');
+      const labels = data.latest_runs.map(item => item.project + ' #' + item.run_id);
+      new Chart(historyCtx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: 'Passed',
+              data: data.latest_runs.map(item => item.passed),
+              backgroundColor: '#2563eb',
+            },
+            {
+              label: 'Failed',
+              data: data.latest_runs.map(item => item.failed),
+              backgroundColor: '#ef4444',
+            },
+            {
+              label: 'Skipped',
+              data: data.latest_runs.map(item => item.skipped),
+              backgroundColor: '#f59e0b',
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { position: 'bottom' } },
+          scales: { x: { stacked: true }, y: { stacked: true } },
+        },
+      });
+    }
+
+    const auto = data.automated_totals;
+    const autoProgress = document.getElementById('autoProgress');
+    const autoCompleted = auto.passed;
+    const autoRatio = auto.total ? Math.round((autoCompleted / auto.total) * 100) : 0;
+    autoProgress.style.width = `${autoRatio}%`;
+    document.getElementById('autoCoverageLabel').textContent = `Finished ${autoCompleted} of ${auto.total} scenarios (${autoRatio}%)`;
+
+    const manual = data.manual_totals;
+    const manualProgress = document.getElementById('manualProgress');
+    const manualCompleted = manual.finished || 0;
+    const manualTotal = manual.total || manualCompleted + (manual.pending || 0);
+    const manualRatio = manualTotal ? Math.round((manualCompleted / manualTotal) * 100) : 0;
+    manualProgress.style.width = `${manualRatio}%`;
+    document.getElementById('manualCoverageLabel').textContent = `Finished ${manualCompleted} of ${manualTotal} planned manual tests (${manualRatio}%)`;
+
+    const scheduleTable = document.getElementById('scheduleTable');
+    const headerRow = document.createElement('tr');
+    ['Day', 'Date', 'Planned runs'].forEach((title) => {
+      const th = document.createElement('th');
+      th.textContent = title;
+      headerRow.appendChild(th);
+    });
+    scheduleTable.appendChild(headerRow);
+
+    data.schedule.forEach((entry) => {
+      const tr = document.createElement('tr');
+      const runs = entry.runs.join(', ');
+      tr.innerHTML = `<td>${entry.label}</td><td>${entry.date}</td><td>${runs}</td>`;
+      scheduleTable.appendChild(tr);
+    });
+  </script>
+</body>
+</html>

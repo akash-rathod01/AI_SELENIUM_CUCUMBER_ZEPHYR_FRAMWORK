@@ -38,7 +38,7 @@ class ReportEmailer:
 
         for path in attachments or []:
             if not path.exists():
-                logger.warning("Skipping attachment; file missing", path=str(path))
+                logger.warning(f"Skipping attachment; file missing: {path}")
                 continue
             with path.open("rb") as handle:
                 message.add_attachment(
@@ -48,7 +48,7 @@ class ReportEmailer:
                     filename=path.name,
                 )
 
-        logger.info("Sending execution report email", recipients=self.settings.recipients)
+        logger.info(f"Sending execution report email to {self.settings.recipients}")
         with smtplib.SMTP(self.settings.smtp_host, self.settings.smtp_port, timeout=self.settings.smtp_timeout) as smtp:
             if self.settings.use_tls:
                 smtp.starttls()

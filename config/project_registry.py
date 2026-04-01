@@ -51,6 +51,13 @@ def _default_registry() -> Dict[str, ProjectDefinition]:
             env_file=root / "projects" / "saucedemo" / ".env.saucedemo",
             description="Saucedemo sample flows covering login and inventory interactions.",
         ),
+        "auto_completion_projcet": ProjectDefinition(
+            name="Auto Completion Project",
+            key="auto_completion_projcet",
+            features_path=root / "projects" / "auto_completion_projcet" / "features",
+            env_file=root / "projects" / "auto_completion_projcet" / ".env.auto_completion_projcet",
+            description="Skeleton project ready for user-provided auto-completion application flows.",
+        ),
     }
 
 

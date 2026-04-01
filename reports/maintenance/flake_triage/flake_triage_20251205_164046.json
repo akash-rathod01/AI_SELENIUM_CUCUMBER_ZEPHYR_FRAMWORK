@@ -1,0 +1,53 @@
+{
+  "generated_at": "2025-12-05T16:40:46.551028Z",
+  "project": "auto_completion_projcet",
+  "source_report": "D:\\VisualStudio_Projects\\ai_selenium_CucumberBDD_Zephyr_framework\\reports\\auto_completion_projcet\\behave-report.json",
+  "failure_count": 3,
+  "classification_tally": {
+    "assertion_mismatch": 3
+  },
+  "insights": [
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "scenario": "Login with valid credentials",
+      "step": "flash message should display success",
+      "keyword": "Then",
+      "status": "failed",
+      "error_message": "ASSERT FAILED:",
+      "classification": "assertion_mismatch",
+      "suggestions": [
+        "Validate the expected value with recent UI changes.",
+        "Review business logic or test data assumptions."
+      ],
+      "locator_hint": null
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "scenario": "Sort table by Last Name",
+      "step": "the user clicks Last Name header",
+      "keyword": "When",
+      "status": "failed",
+      "error_message": "ASSERT FAILED: Sortable table header 'Last Name' not found",
+      "classification": "assertion_mismatch",
+      "suggestions": [
+        "Validate the expected value with recent UI changes.",
+        "Review business logic or test data assumptions."
+      ],
+      "locator_hint": null
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "scenario": "Sort table by First Name",
+      "step": "the user clicks First Name header",
+      "keyword": "When",
+      "status": "failed",
+      "error_message": "ASSERT FAILED: Sortable table header 'First Name' not found",
+      "classification": "assertion_mismatch",
+      "suggestions": [
+        "Validate the expected value with recent UI changes.",
+        "Review business logic or test data assumptions."
+      ],
+      "locator_hint": null
+    }
+  ]
+}

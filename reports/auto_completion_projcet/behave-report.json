@@ -1,0 +1,3204 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/auto_completion_smoke.feature:2",
+      "name": "Placeholder smoke scenario",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/auto_completion_smoke.feature:3",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/auto_completion_steps.py:4"
+          },
+          "name": "the Auto Completion application is reachable",
+          "result": {
+            "duration": 0.003792285919189453,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/auto_completion_smoke.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/auto_completion_steps.py:11"
+          },
+          "name": "I initialise the automation context",
+          "result": {
+            "duration": 0.0001685619354248047,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/auto_completion_smoke.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/auto_completion_steps.py:18"
+          },
+          "name": "I should replace this scenario with a real end-to-end flow",
+          "result": {
+            "duration": 0.00529026985168457,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "projects/auto_completion_projcet/features/auto_completion_smoke.feature:1",
+  "name": "Auto Completion project smoke skeleton",
+  "status": "passed",
+  "tags": []
+},
+
+{
+  "elements": [
+    {
+      "keyword": "Background",
+      "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:3",
+      "name": "",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:4",
+          "name": "the application is prepared",
+          "step_type": "given"
+        }
+      ],
+      "type": "background"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:6",
+      "name": "Home page responds successfully",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00023674964904785156,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:7",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://dotesthere.com/"
+              },
+              {
+                "name": "title",
+                "value": "DoTestHere.com - Free Automation Testing Practice Hub | Selenium, Playwright, API Testing"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:26"
+          },
+          "name": "Ensure the page at https://dotesthere.com/ responds with HTTP 200 and displays the title 'DoTestHere.com - Free Automation Testing Practice Hub | Selenium, Playwright, API Testing'.",
+          "result": {
+            "duration": 0.9899802207946777,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:8",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:31"
+          },
+          "name": "the expected outcome should be verified",
+          "result": {
+            "duration": 0.4258406162261963,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:10",
+      "name": "API Testing page responds successfully",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00028634071350097656,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:11",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://dotesthere.com/api-testing"
+              },
+              {
+                "name": "title",
+                "value": "API Testing Practice Hub - DoTestHere.com | Free REST API Testing Environment"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:26"
+          },
+          "name": "Ensure the page at https://dotesthere.com/api-testing responds with HTTP 200 and displays the title 'API Testing Practice Hub - DoTestHere.com | Free REST API Testing Environment'.",
+          "result": {
+            "duration": 0.633887767791748,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:12",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:31"
+          },
+          "name": "the expected outcome should be verified",
+          "result": {
+            "duration": 0.19107675552368164,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:14",
+      "name": "Manual Testing Lab responds successfully",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00027632713317871094,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:15",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://dotesthere.com/manual-testing-lab"
+              },
+              {
+                "name": "title",
+                "value": "Manual Testing Practice Lab - DoTestHere.com | Free Testing Practice Environment"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:26"
+          },
+          "name": "Ensure the page at https://dotesthere.com/manual-testing-lab responds with HTTP 200 and displays the title 'Manual Testing Practice Lab - DoTestHere.com | Free Testing Practice Environment'.",
+          "result": {
+            "duration": 0.6768293380737305,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:16",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:31"
+          },
+          "name": "the expected outcome should be verified",
+          "result": {
+            "duration": 0.33448147773742676,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:18",
+      "name": "Author page responds successfully",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00016617774963378906,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:19",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://dotesthere.com/author"
+              },
+              {
+                "name": "title",
+                "value": "About Ankur Malviya - QA Automation Engineer | DoTestHere.com"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:26"
+          },
+          "name": "Ensure the page at https://dotesthere.com/author responds with HTTP 200 and displays the title 'About Ankur Malviya - QA Automation Engineer | DoTestHere.com'.",
+          "result": {
+            "duration": 14.295054912567139,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:20",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:31"
+          },
+          "name": "the expected outcome should be verified",
+          "result": {
+            "duration": 0.0442047119140625,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:22",
+      "name": "Manual Testing Lab pricing calculator",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0005512237548828125,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:23",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:39"
+          },
+          "name": "I complete the manual lab pricing calculator form",
+          "result": {
+            "duration": 31.208240032196045,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:24",
+          "name": "the expected outcome should be verified",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:26",
+      "name": "Manual Testing Lab blur effects",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00019550323486328125,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:27",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:57"
+          },
+          "name": "I configure manual lab blur controls",
+          "result": {
+            "duration": 31.469491720199585,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:28",
+          "name": "the expected outcome should be verified",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:30",
+      "name": "Manual Testing Lab format validation",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00016021728515625,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:31",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:71"
+          },
+          "name": "I validate manual lab format inputs",
+          "result": {
+            "duration": 1.0129430294036865,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:32",
+          "name": "the expected outcome should be verified",
+          "step_type": "then"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:34",
+          "name": "the manual lab inputs should reflect the entered data",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:36",
+      "name": "Primary navigation links are reachable",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0002040863037109375,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:37",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:125"
+          },
+          "name": "I capture the primary navigation links",
+          "result": {
+            "duration": 0.2652902603149414,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:38",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:130"
+          },
+          "name": "each captured navigation link should respond with HTTP 200",
+          "result": {
+            "duration": 5.840375661849976,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "projects/auto_completion_projcet/features/dotesthere_auto.feature:1",
+  "name": "DoTestHere smoke coverage",
+  "status": "error",
+  "tags": []
+},
+
+{
+  "description": [
+    "Comprehensive automation coverage for all dotesthere.com practice modules"
+  ],
+  "elements": [
+    {
+      "keyword": "Background",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:4",
+      "name": "",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "name": "the application is prepared",
+          "step_type": "given"
+        }
+      ],
+      "type": "background"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:8",
+      "name": "Verify dotesthere.com home page accessibility",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0003139972686767578,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:9",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://dotesthere.com/"
+              },
+              {
+                "name": "title",
+                "value": "DoTestHere.com - Free Automation Testing Practice Hub | Selenium, Playwright, API Testing"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:26"
+          },
+          "name": "Ensure the page at https://dotesthere.com/ responds with HTTP 200 and displays the title 'DoTestHere.com - Free Automation Testing Practice Hub | Selenium, Playwright, API Testing'.",
+          "result": {
+            "duration": 1.249713659286499,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:10",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:31"
+          },
+          "name": "the expected outcome should be verified",
+          "result": {
+            "duration": 0.33429574966430664,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:13",
+      "name": "Test A/B version switching functionality",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001552104949951172,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:14",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:13"
+          },
+          "name": "the user navigates to AB Testing module",
+          "result": {
+            "duration": 0.23032593727111816,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:15",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:115"
+          },
+          "name": "the user clicks Switch Version button",
+          "result": {
+            "duration": 0.04037761688232422,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:16",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:119"
+          },
+          "name": "the heading text should change between Version A and Version B",
+          "result": {
+            "duration": 0.00016450881958007812,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:19",
+      "name": "Add and remove dynamic elements",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00020837783813476562,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:20",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:17"
+          },
+          "name": "the user navigates to Add/Remove Elements module",
+          "result": {
+            "duration": 0.2456803321838379,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:21",
+          "match": {
+            "arguments": [
+              {
+                "name": "count",
+                "original": "3",
+                "value": 3
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:125"
+          },
+          "name": "the user clicks Add Element button 3 times",
+          "result": {
+            "duration": 0.05182385444641113,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:22",
+          "match": {
+            "arguments": [
+              {
+                "name": "count",
+                "original": "3",
+                "value": 3
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:130"
+          },
+          "name": "3 delete buttons should be present",
+          "result": {
+            "duration": 0.002442598342895508,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:23",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:135"
+          },
+          "name": "the user clicks first delete button",
+          "result": {
+            "duration": 0.5125353336334229,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:24",
+          "match": {
+            "arguments": [
+              {
+                "name": "count",
+                "original": "2",
+                "value": 2
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:130"
+          },
+          "name": "2 delete buttons should be present",
+          "result": {
+            "duration": 0.002446889877319336,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:27",
+      "name": "Trigger basic authentication simulation",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00019979476928710938,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:28",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:21"
+          },
+          "name": "the user navigates to Basic Auth module",
+          "result": {
+            "duration": 0.23721957206726074,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:29",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:141"
+          },
+          "name": "the user clicks Authenticate button",
+          "result": {
+            "duration": 0.04557919502258301,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:30",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:145"
+          },
+          "name": "auth result should display success message",
+          "result": {
+            "duration": 0.0001220703125,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:33",
+      "name": "Detect broken images on page",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0003101825714111328,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:34",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:25"
+          },
+          "name": "the user navigates to Broken Images module",
+          "result": {
+            "duration": 0.24423670768737793,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:35",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:151"
+          },
+          "name": "the page loads all images",
+          "result": {
+            "duration": 1.000746250152588,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:36",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:155"
+          },
+          "name": "broken images should be identified",
+          "result": {
+            "duration": 0.01710963249206543,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:39",
+      "name": "Interact with dynamic table actions",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00018143653869628906,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:40",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:29"
+          },
+          "name": "the user navigates to Challenging DOM module",
+          "result": {
+            "duration": 0.2483980655670166,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:41",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:164"
+          },
+          "name": "the user clicks Edit button for first row",
+          "result": {
+            "duration": 30.216901540756226,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:42",
+          "name": "the action should be captured",
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:43",
+          "name": "the user clicks Delete button for first row",
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:44",
+          "name": "the action should be captured",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:47",
+      "name": "Toggle checkbox states",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001838207244873047,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:48",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:33"
+          },
+          "name": "the user navigates to Checkboxes module",
+          "result": {
+            "duration": 0.23781108856201172,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:49",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:180"
+          },
+          "name": "the user toggles checkbox1",
+          "result": {
+            "duration": 0.11748242378234863,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:50",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:188"
+          },
+          "name": "checkbox1 state should change",
+          "result": {
+            "duration": 0.00011849403381347656,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:51",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:184"
+          },
+          "name": "the user toggles checkbox2",
+          "result": {
+            "duration": 0.09403610229492188,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:52",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:192"
+          },
+          "name": "checkbox2 state should change",
+          "result": {
+            "duration": 0.00011682510375976562,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:55",
+      "name": "Right-click context menu interaction",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0009593963623046875,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:56",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:37"
+          },
+          "name": "the user navigates to Context Menu module",
+          "result": {
+            "duration": 0.23659968376159668,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:57",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:198"
+          },
+          "name": "the user right-clicks on hot-spot element",
+          "result": {
+            "duration": 0.5791547298431396,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:58",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:202"
+          },
+          "name": "context menu alert should appear",
+          "result": {
+            "duration": 0.00019407272338867188,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:59",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:206"
+          },
+          "name": "the user accepts the alert",
+          "result": {
+            "duration": 0.00014019012451171875,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:60",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:210"
+          },
+          "name": "alert should be dismissed",
+          "result": {
+            "duration": 0.00011086463928222656,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:63",
+      "name": "Verify gallery link visibility toggle",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00017905235290527344,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:64",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:41"
+          },
+          "name": "the user navigates to Disappearing Elements module",
+          "result": {
+            "duration": 0.23446440696716309,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:65",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:216"
+          },
+          "name": "the page loads navigation elements",
+          "result": {
+            "duration": 0.5007586479187012,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:66",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:220"
+          },
+          "name": "gallery link visibility should be verified",
+          "result": {
+            "duration": 0.003201007843017578,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:69",
+      "name": "Drag column A to column B",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00017714500427246094,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:70",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:45"
+          },
+          "name": "the user navigates to Drag and Drop module",
+          "result": {
+            "duration": 0.2377605438232422,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:71",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:227"
+          },
+          "name": "the user drags column-a to column-b",
+          "result": {
+            "duration": 0.5997340679168701,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:72",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:231"
+          },
+          "name": "drag status should show successful swap",
+          "result": {
+            "duration": 0.0001246929168701172,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:75",
+      "name": "Select dropdown options",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0003249645233154297,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:76",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:49"
+          },
+          "name": "the user navigates to Dropdown module",
+          "result": {
+            "duration": 0.24130725860595703,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:77",
+          "match": {
+            "arguments": [
+              {
+                "name": "option",
+                "value": "Option 1"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:238"
+          },
+          "name": "the user selects Option 1 from dropdown",
+          "result": {
+            "duration": 0.11362743377685547,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:78",
+          "match": {
+            "arguments": [
+              {
+                "name": "option",
+                "value": "Option 1"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:242"
+          },
+          "name": "selected option should be Option 1",
+          "result": {
+            "duration": 0.026265859603881836,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:79",
+          "match": {
+            "arguments": [
+              {
+                "name": "option",
+                "value": "Option 2"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:238"
+          },
+          "name": "the user selects Option 2 from dropdown",
+          "result": {
+            "duration": 0.09690070152282715,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:80",
+          "match": {
+            "arguments": [
+              {
+                "name": "option",
+                "value": "Option 2"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:242"
+          },
+          "name": "selected option should be Option 2",
+          "result": {
+            "duration": 0.02493739128112793,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:83",
+      "name": "Refresh dynamic content",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001595020294189453,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:84",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:53"
+          },
+          "name": "the user navigates to Dynamic Content module",
+          "result": {
+            "duration": 0.2406768798828125,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:85",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:249"
+          },
+          "name": "the user clicks Refresh Content button",
+          "result": {
+            "duration": 0.6278431415557861,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:86",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:253"
+          },
+          "name": "content area should update with new text",
+          "result": {
+            "duration": 0.00011610984802246094,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:89",
+      "name": "Toggle dynamic checkbox visibility",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001628398895263672,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:90",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:57"
+          },
+          "name": "the user navigates to Dynamic Controls module",
+          "result": {
+            "duration": 0.23603010177612305,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:91",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:259"
+          },
+          "name": "the user clicks Add/Remove button",
+          "result": {
+            "duration": 0.04224872589111328,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:92",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:263"
+          },
+          "name": "checkbox presence should toggle",
+          "result": {
+            "duration": 0.0001270771026611328,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:94",
+      "name": "Enable/Disable dynamic input",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00017690658569335938,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:95",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:57"
+          },
+          "name": "the user navigates to Dynamic Controls module",
+          "result": {
+            "duration": 0.22798705101013184,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:96",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:267"
+          },
+          "name": "the user clicks Enable/Disable button",
+          "result": {
+            "duration": 0.030949831008911133,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:97",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:271"
+          },
+          "name": "input field enabled state should toggle",
+          "result": {
+            "duration": 0.00017714500427246094,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:100",
+      "name": "Wait for loading spinner completion",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0005514621734619141,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:101",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:61"
+          },
+          "name": "the user navigates to Dynamic Loading module",
+          "result": {
+            "duration": 0.29718565940856934,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:102",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:277"
+          },
+          "name": "the user clicks Start button",
+          "result": {
+            "duration": 3.1496975421905518,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:103",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:281"
+          },
+          "name": "loading spinner should appear and disappear",
+          "result": {
+            "duration": 0.00011754035949707031,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:104",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:285"
+          },
+          "name": "finish text should be displayed",
+          "result": {
+            "duration": 0.0001010894775390625,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:107",
+      "name": "Download sample file",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001728534698486328,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:108",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:65"
+          },
+          "name": "the user navigates to File Download module",
+          "result": {
+            "duration": 15.332217454910278,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:109",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:291"
+          },
+          "name": "the user clicks download link",
+          "result": {
+            "duration": 1.1265363693237305,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:110",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:297"
+          },
+          "name": "file should be downloaded successfully",
+          "result": {
+            "duration": 0.0003323554992675781,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:113",
+      "name": "Upload file via input",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0003173351287841797,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:114",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:69"
+          },
+          "name": "the user navigates to File Upload module",
+          "result": {
+            "duration": 15.334684371948242,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:115",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:304"
+          },
+          "name": "the user selects a file and clicks upload",
+          "result": {
+            "duration": 1.0857853889465332,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:116",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:318"
+          },
+          "name": "upload result should confirm success",
+          "result": {
+            "duration": 0.011630058288574219,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:119",
+      "name": "Login with valid credentials",
+      "status": "failed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001709461212158203,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:120",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:73"
+          },
+          "name": "the user navigates to Form Authentication module",
+          "result": {
+            "duration": 15.33234977722168,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:121",
+          "match": {
+            "arguments": [
+              {
+                "name": "username",
+                "value": "tomsmith"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:325"
+          },
+          "name": "the user enters username tomsmith",
+          "result": {
+            "duration": 0.025682449340820312,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:122",
+          "match": {
+            "arguments": [
+              {
+                "name": "password",
+                "value": "SuperSecretPassword!"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:331"
+          },
+          "name": "the user enters password SuperSecretPassword!",
+          "result": {
+            "duration": 0.015772581100463867,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:123",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:337"
+          },
+          "name": "the user clicks login button",
+          "result": {
+            "duration": 1.069941520690918,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:124",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:343"
+          },
+          "name": "flash message should display success",
+          "result": {
+            "duration": 0.01585841178894043,
+            "error_message": "ASSERT FAILED: ",
+            "status": "failed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:127",
+      "name": "Switch between iframe contexts",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00016689300537109375,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:128",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:77"
+          },
+          "name": "the user navigates to Frames module",
+          "result": {
+            "duration": 15.334572792053223,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:129",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:350"
+          },
+          "name": "the user switches to frame1",
+          "result": {
+            "duration": 0.008776664733886719,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:130",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:355"
+          },
+          "name": "frame1 content should be accessible",
+          "result": {
+            "duration": 0.011278629302978516,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:131",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:360"
+          },
+          "name": "the user switches back to default content",
+          "result": {
+            "duration": 0.002886533737182617,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:132",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:364"
+          },
+          "name": "the user switches to frame2",
+          "result": {
+            "duration": 0.004270792007446289,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:133",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:369"
+          },
+          "name": "frame2 content should be accessible",
+          "result": {
+            "duration": 0.009248495101928711,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:136",
+      "name": "Adjust slider value",
+      "status": "hook_error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "name": "the application is prepared",
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:137",
+          "name": "the user navigates to Horizontal Slider module",
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:138",
+          "name": "the user moves slider to position 5",
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:139",
+          "name": "slider value should display 5",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:142",
+      "name": "Hover over figure elements",
+      "status": "hook_error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "name": "the application is prepared",
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:143",
+          "name": "the user navigates to Hovers module",
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:144",
+          "name": "the user hovers over figure 1",
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:145",
+          "name": "caption for user1 should appear",
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:146",
+          "name": "the user hovers over figure 2",
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:147",
+          "name": "caption for user2 should appear",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:150",
+      "name": "Handle JS Alert",
+      "status": "hook_error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "name": "the application is prepared",
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:151",
+          "name": "the user navigates to JavaScript Alerts module",
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:152",
+          "name": "the user clicks JS Alert button",
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:153",
+          "name": "alert with message should appear",
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:154",
+          "name": "the user accepts the alert",
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:155",
+          "name": "alert should be dismissed",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:157",
+      "name": "Handle JS Confirm - Accept",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00015974044799804688,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:158",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:89"
+          },
+          "name": "the user navigates to JavaScript Alerts module",
+          "result": {
+            "duration": 0.23897933959960938,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:159",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:409"
+          },
+          "name": "the user clicks JS Confirm button",
+          "result": {
+            "duration": 0.09070038795471191,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:160",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:413"
+          },
+          "name": "the user accepts the confirm",
+          "result": {
+            "duration": 0.00019311904907226562,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:161",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:421"
+          },
+          "name": "result should show OK",
+          "result": {
+            "duration": 0.00011658668518066406,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:163",
+      "name": "Handle JS Confirm - Dismiss",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00027489662170410156,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:164",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:89"
+          },
+          "name": "the user navigates to JavaScript Alerts module",
+          "result": {
+            "duration": 0.2452983856201172,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:165",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:409"
+          },
+          "name": "the user clicks JS Confirm button",
+          "result": {
+            "duration": 0.11645984649658203,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:166",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:417"
+          },
+          "name": "the user dismisses the confirm",
+          "result": {
+            "duration": 0.07991337776184082,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:167",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:425"
+          },
+          "name": "result should show Cancel",
+          "result": {
+            "duration": 0.00021195411682128906,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:169",
+      "name": "Handle JS Prompt with input",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00019431114196777344,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:170",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:89"
+          },
+          "name": "the user navigates to JavaScript Alerts module",
+          "result": {
+            "duration": 0.24098658561706543,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:171",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:429"
+          },
+          "name": "the user clicks JS Prompt button",
+          "result": {
+            "duration": 0.00017261505126953125,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:172",
+          "match": {
+            "arguments": [
+              {
+                "name": "text",
+                "value": "Test Input"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:433"
+          },
+          "name": "the user enters Test Input in prompt",
+          "result": {
+            "duration": 0.18610358238220215,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:173",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:437"
+          },
+          "name": "the user accepts the prompt",
+          "result": {
+            "duration": 0.0002269744873046875,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:174",
+          "match": {
+            "arguments": [
+              {
+                "name": "text",
+                "value": "Test Input"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:441"
+          },
+          "name": "result should show Test Input",
+          "result": {
+            "duration": 0.00013136863708496094,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:177",
+      "name": "Capture key press events",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0002048015594482422,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:178",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:93"
+          },
+          "name": "the user navigates to Key Presses module",
+          "result": {
+            "duration": 0.24361658096313477,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:179",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:447"
+          },
+          "name": "the user focuses on target input",
+          "result": {
+            "duration": 0.08610677719116211,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:180",
+          "match": {
+            "arguments": [
+              {
+                "name": "key",
+                "value": "ENTER"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:452"
+          },
+          "name": "the user presses ENTER key",
+          "result": {
+            "duration": 0.11030054092407227,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:181",
+          "match": {
+            "arguments": [
+              {
+                "name": "key",
+                "value": "ENTER"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:462"
+          },
+          "name": "key result should display ENTER",
+          "result": {
+            "duration": 0.00012493133544921875,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:182",
+          "match": {
+            "arguments": [
+              {
+                "name": "key",
+                "value": "TAB"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:452"
+          },
+          "name": "the user presses TAB key",
+          "result": {
+            "duration": 0.10994863510131836,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:183",
+          "match": {
+            "arguments": [
+              {
+                "name": "key",
+                "value": "TAB"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:462"
+          },
+          "name": "key result should display TAB",
+          "result": {
+            "duration": 0.0001289844512939453,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:186",
+      "name": "Open and switch to new window",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00015234947204589844,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:187",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:97"
+          },
+          "name": "the user navigates to Multiple Windows module",
+          "result": {
+            "duration": 0.2310810089111328,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:188",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:468"
+          },
+          "name": "the user clicks Click Here button",
+          "result": {
+            "duration": 0.2685532569885254,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:189",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:472"
+          },
+          "name": "new window should open",
+          "result": {
+            "duration": 0.00014543533325195312,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:190",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:476"
+          },
+          "name": "the user switches to new window",
+          "result": {
+            "duration": 0.009931802749633789,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:191",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:481"
+          },
+          "name": "new window content should be verified",
+          "result": {
+            "duration": 0.0017480850219726562,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:192",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:485"
+          },
+          "name": "the user closes new window and switches back",
+          "result": {
+            "duration": 0.025107860565185547,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:193",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:491"
+          },
+          "name": "original window should be active",
+          "result": {
+            "duration": 0.0016963481903076172,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:196",
+      "name": "Access shadow DOM elements",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001780986785888672,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:197",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:101"
+          },
+          "name": "the user navigates to Shadow DOM module",
+          "result": {
+            "duration": 0.23755645751953125,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:198",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:497"
+          },
+          "name": "the page loads shadow host",
+          "result": {
+            "duration": 1.0004520416259766,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:199",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:501"
+          },
+          "name": "shadow root content should be accessible",
+          "result": {
+            "duration": 0.005222797393798828,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:202",
+      "name": "Sort table by Last Name",
+      "status": "failed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001900196075439453,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:203",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:105"
+          },
+          "name": "the user navigates to Sortable Tables module",
+          "result": {
+            "duration": 0.24189519882202148,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:204",
+          "match": {
+            "arguments": [
+              {
+                "name": "header",
+                "value": "Last Name"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:509"
+          },
+          "name": "the user clicks Last Name header",
+          "result": {
+            "duration": 0.03441905975341797,
+            "error_message": "ASSERT FAILED: Sortable table header 'Last Name' not found",
+            "status": "failed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:205",
+          "name": "table should be sorted by Last Name",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:207",
+      "name": "Sort table by First Name",
+      "status": "failed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00017309188842773438,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:208",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:105"
+          },
+          "name": "the user navigates to Sortable Tables module",
+          "result": {
+            "duration": 0.23416519165039062,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:209",
+          "match": {
+            "arguments": [
+              {
+                "name": "header",
+                "value": "First Name"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:509"
+          },
+          "name": "the user clicks First Name header",
+          "result": {
+            "duration": 0.033679962158203125,
+            "error_message": "ASSERT FAILED: Sortable table header 'First Name' not found",
+            "status": "failed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:210",
+          "name": "table should be sorted by First Name",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:213",
+      "name": "Edit content in TinyMCE editor",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001735687255859375,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:214",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:109"
+          },
+          "name": "the user navigates to WYSIWYG Editor module",
+          "result": {
+            "duration": 0.23720312118530273,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:215",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:520"
+          },
+          "name": "the user switches to editor iframe",
+          "result": {
+            "duration": 0.00021791458129882812,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:216",
+          "match": {
+            "arguments": [
+              {
+                "name": "text",
+                "value": "Sample Test Content"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:524"
+          },
+          "name": "the user types Sample Test Content",
+          "result": {
+            "duration": 0.09070825576782227,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:217",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:360"
+          },
+          "name": "the user switches back to default content",
+          "result": {
+            "duration": 0.0022628307342529297,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:218",
+          "match": {
+            "arguments": [
+              {
+                "name": "text",
+                "value": "Sample Test Content"
+              }
+            ],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_modules_steps.py:528"
+          },
+          "name": "editor should contain Sample Test Content",
+          "result": {
+            "duration": 0.009079694747924805,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:221",
+      "name": "Calculate total with pricing inputs",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001595020294189453,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:222",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:39"
+          },
+          "name": "I complete the manual lab pricing calculator form",
+          "result": {
+            "duration": 31.415916204452515,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:223",
+          "name": "the expected outcome should be verified",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:226",
+      "name": "Apply blur effects to text",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.00025153160095214844,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:227",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:57"
+          },
+          "name": "I configure manual lab blur controls",
+          "result": {
+            "duration": 31.513243198394775,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:228",
+          "name": "the expected outcome should be verified",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:231",
+      "name": "Validate input formats",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0002887248992919922,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:232",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:71"
+          },
+          "name": "I validate manual lab format inputs",
+          "result": {
+            "duration": 1.0019245147705078,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:233",
+          "name": "the expected outcome should be verified",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:236",
+      "name": "Apply grid layout settings",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.0001957416534423828,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:237",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:86"
+          },
+          "name": "I configure manual lab grid layout",
+          "result": {
+            "duration": 0.7831954956054688,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:238",
+          "name": "the expected outcome should be verified",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:241",
+      "name": "Apply visual theme settings",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:20"
+          },
+          "name": "the application is prepared",
+          "result": {
+            "duration": 0.000152587890625,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:242",
+          "match": {
+            "arguments": [],
+            "location": "projects/auto_completion_projcet/features/steps/dotesthere_auto_steps.py:99"
+          },
+          "name": "I configure manual lab visual theme",
+          "result": {
+            "duration": 0.8280153274536133,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:243",
+          "name": "the expected outcome should be verified",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "projects/auto_completion_projcet/features/dotesthere_modules.feature:1",
+  "name": "DoTestHere.com - Complete Module Testing Coverage",
+  "status": "error",
+  "tags": []
+}
+]

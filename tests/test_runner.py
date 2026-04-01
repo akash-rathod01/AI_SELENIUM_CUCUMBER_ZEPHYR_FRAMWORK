@@ -26,9 +26,18 @@ from config.project_registry import ProjectDefinition, get_project, list_project
 from reporting.emailer import ReportEmailer
 from reporting.report_manager import ReportManager
 from utils.ai_analytics import TestRunAnalytics
+from utils.ai_maintenance import AIMaintenanceManager
 
 
-def run_behave(tags: Optional[str] = None, dry_run: bool = False, project_key: Optional[str] = None) -> int:
+def run_behave(
+	tags: Optional[str] = None,
+	dry_run: bool = False,
+	project_key: Optional[str] = None,
+	*,
+	ai_maintenance: bool = False,
+	maintenance_urls: Optional[List[str]] = None,
+	maintenance_snapshot_label: Optional[str] = None,
+) -> int:
 	project = _resolve_project(project_key)
 	_setup_env(project)
 
@@ -61,10 +70,7 @@ def run_behave(tags: Optional[str] = None, dry_run: bool = False, project_key: O
 		command.append("--dry-run")
 
 	logger.info(
-		"Executing Behave suite",
-		command=" ".join(command),
-		project=project.key,
-		features=str(features_path),
+		f"Executing Behave suite - Project: {project.key}, Features: {features_path}, Command: {' '.join(command)}"
 	)
 	result = subprocess.run(command, check=False)
 
@@ -88,10 +94,32 @@ def run_behave(tags: Optional[str] = None, dry_run: bool = False, project_key: O
 
 	_maybe_send_email(summary, [html_summary_path, archive_path])
 
+	maintenance_report_path: Optional[str] = None
+	if ai_maintenance:
+		try:
+			maintainer = AIMaintenanceManager()
+			maintenance_report = maintainer.perform_maintenance(
+				project=project.key,
+				run_summary=summary,
+				base_urls=maintenance_urls,
+				snapshot_label=maintenance_snapshot_label,
+				json_report_path=json_report,
+			)
+			maintenance_report_path = maintenance_report.get("report_path")
+			snapshot_path = maintenance_report.get("snapshot")
+			logger.info(
+				f"AI maintenance completed - report={maintenance_report_path or 'n/a'}, snapshot={snapshot_path or 'n/a'}"
+			)
+		except Exception as exc:  # pragma: no cover - defensive guard for optional feature
+			logger.error(f"AI maintenance failed - Error: {exc}")
+
 	if summary.get("scenarios", {}).get("failed", 0) > 0:
 		logger.warning("Some scenarios failed; see reports for details")
 	else:
-		logger.info("All scenarios passed")
+		if maintenance_report_path:
+			logger.info(f"All scenarios passed; maintenance report available at {maintenance_report_path}")
+		else:
+			logger.info("All scenarios passed")
 
 	return result.returncode
 
@@ -99,9 +127,9 @@ def run_behave(tags: Optional[str] = None, dry_run: bool = False, project_key: O
 def _setup_env(project: ProjectDefinition) -> None:
 	if project.env_file and project.env_file.exists():
 		load_dotenv(dotenv_path=project.env_file, override=True)
-		logger.info("Loaded project environment", project=project.key, env_file=str(project.env_file))
+		logger.info(f"Loaded project environment - Project: {project.key}, Env file: {project.env_file}")
 	else:
-		logger.debug("No project-specific .env file found", project=project.key)
+		logger.debug(f"No project-specific .env file found - Project: {project.key}")
 
 
 def _resolve_project(project_key: Optional[str]) -> ProjectDefinition:
@@ -126,10 +154,13 @@ def _print_projects() -> None:
 
 def build_summary(json_report: Path) -> Dict:
 	if not json_report.exists():
-		logger.warning("JSON report missing; returning empty summary", path=str(json_report))
+		logger.warning(f"JSON report missing; returning empty summary - Path: {json_report}")
 		return default_summary()
 
-	data = json.loads(json_report.read_text(encoding="utf-8"))
+	raw_text = json_report.read_text(encoding="utf-8")
+	if "\n,,\n" in raw_text:
+		raw_text = raw_text.replace("\n,,\n", "\n\n")
+	data = json.loads(raw_text)
 	if not isinstance(data, list):  # pragma: no cover - defensive
 		data = [data]
 
@@ -244,7 +275,7 @@ def _maybe_send_email(summary: Dict, attachments: List[Path]) -> None:
 	try:
 		emailer.send("Automation Execution Summary", body, attachments)
 	except Exception as exc:  # pragma: no cover - external dependency
-		logger.error("Failed to send report email", error=str(exc))
+		logger.error(f"Failed to send report email - Error: {exc}")
 
 
 def main() -> int:
@@ -261,11 +292,36 @@ def main() -> int:
 		action="store_true",
 		help="List all registered project keys and exit",
 	)
+	parser.add_argument(
+		"--ai-maintenance",
+		action="store_true",
+		help="Generate AI maintenance snapshot and health diagnostics after execution",
+	)
+	parser.add_argument(
+		"--maintenance-base-url",
+		action="append",
+		help=(
+			"Seed URL for broken-link diagnostics (can be provided multiple times); "
+			"only used when --ai-maintenance is set"
+		),
+	)
+	parser.add_argument(
+		"--maintenance-snapshot-label",
+		help="Custom label for the AI maintenance snapshot",
+		default=None,
+	)
 	args = parser.parse_args()
 	if args.list_projects:
 		_print_projects()
 		return 0
-	return run_behave(tags=args.tags, dry_run=args.dry_run, project_key=args.project)
+	return run_behave(
+		tags=args.tags,
+		dry_run=args.dry_run,
+		project_key=args.project,
+		ai_maintenance=args.ai_maintenance,
+		maintenance_urls=args.maintenance_base_url,
+		maintenance_snapshot_label=args.maintenance_snapshot_label,
+	)
 
 
 if __name__ == "__main__":

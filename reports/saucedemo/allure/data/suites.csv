@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","31394","Removing an item updates the cart badge","","2025-12-10","passed","2025-12-10","","","",""
+"","26006","Sorting by price surfaces the lowest-cost item first","","2025-12-10","passed","2025-12-10","","","",""
+"","234","Auto Draft Scenario 1","","2025-12-10","passed","2025-12-10","","","",""
+"","46571","Complete checkout with four inventory items","","2025-12-10","passed","2025-12-10","","","",""

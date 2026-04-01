@@ -69,7 +69,10 @@ class SelfHealingLocator:
 		raise NoSuchElementException(locator_value)
 
 	def _persist_suggestion(self, locator_type: str, locator_value: str, strategy: str) -> None:
-		self.telemetry[locator_value]["suggested_strategy"] = strategy
+		key = f"{locator_type}:{locator_value}"
+		entry = self.telemetry[key]
+		entry["suggested_strategy"] = strategy
+		entry["last_update"] = datetime.utcnow().isoformat() + "Z"
 		self._save_telemetry()
 
 	def save_screenshot(self, test_name: str) -> None:

@@ -1,0 +1,1 @@
+{"71bd5f557b8985b25487a96ef96a6098":{"statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"880afd636f322408","status":"broken","statusDetails":"Exception: Element not found: css selector=input.gwt-TextBox.GDPVGE1BC3B\n","time":{"start":1775055050715,"stop":1775055069735,"duration":19020}}]}}

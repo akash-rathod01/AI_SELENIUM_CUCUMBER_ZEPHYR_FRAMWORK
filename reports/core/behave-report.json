@@ -1,0 +1,61 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "features/example.feature:2",
+      "name": "Successful login and skip Remember Me",
+      "status": "error",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/example.feature:3",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/common_steps.py:6"
+          },
+          "name": "the user is on the Workday login page",
+          "result": {
+            "duration": 8.674575328826904,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/example.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/common_steps.py:13"
+          },
+          "name": "the user enters valid credentials",
+          "result": {
+            "duration": 10.340327024459839,
+            "status": "error"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/example.feature:5",
+          "name": "the user skips the Remember Device prompt",
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "features/example.feature:6",
+          "name": "the user should be on the Workday home page",
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "features/example.feature:1",
+  "name": "Workday Login",
+  "status": "error",
+  "tags": []
+}
+]

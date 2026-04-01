@@ -11,3 +11,41 @@ python tests/test_runner.py --project saucedemo
 
 ReRun This 
 python tests/test_runner.py --project saucedemo
+
+..................................................
+
+📝 Auto Completion Project : 
+
+python tests/test_runner.py --project auto_completion_projcet
+
+python tests/test_runner.py --project auto_completion_projcet
+
+QA DEMO Website complete PROJECT: Child project inside the Sauce labs
+
+Run Command: it is for the :- 
+
+python tests/test_runner.py --tags @regression
+
+
+python tests/test_runner.py --tags @regression
+
+
+
+Revisit the and test scan  Commnads : Overall scan and Troble shoot
+behave --tags "@regression" --no-skipped -D stepdef_use_old_runner=true
+
+behave features/demo_shop_regression.feature -D stepdef_use_old_runner=true --no-skipped
+..................................................................................................
+
+End-to-end lifecycle scenario:
+Set-Location -Path D:\VisualStudio_Projects\Demo_shop_QA; behave features/demo_shop_regression.feature --tags @end_to_end --no-skipped
+
+Complete regression suite:
+Set-Location -Path D:\VisualStudio_Projects\Demo_shop_QA; python [test_runner.py](http://_vscodecontentref_/0) --tags @regression
+
+Kick these off from a new PowerShell session so the working directory and environment are clean.
+.............................
+Full end-to-end regression in Chrome via the project harness.
+Set-Location -Path D:\VisualStudio_Projects\Demo_shop_QA; python [test_runner.py](http://_vscodecontentref_/0) --tags @regression
+
+.....................................................................................................

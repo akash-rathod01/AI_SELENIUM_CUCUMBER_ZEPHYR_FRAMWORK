@@ -198,5 +198,823 @@
     "skipped": 0,
     "failed_tests": [],
     "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120092933",
+    "timestamp": "2025-11-20T09:29:33.167427",
+    "duration": 76.42,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120095314",
+    "timestamp": "2025-11-20T09:53:14.133954",
+    "duration": 76.42,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120095440",
+    "timestamp": "2025-11-20T09:54:40.513927",
+    "duration": 76.42,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120095506",
+    "timestamp": "2025-11-20T09:55:06.304998",
+    "duration": 76.42,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120095943",
+    "timestamp": "2025-11-20T09:59:43.243502",
+    "duration": 76.42,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120100059",
+    "timestamp": "2025-11-20T10:00:59.909912",
+    "duration": 44.98,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120100221",
+    "timestamp": "2025-11-20T10:02:21.586631",
+    "duration": 51.61,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120121541",
+    "timestamp": "2025-11-20T12:15:41.202321",
+    "duration": 66.01,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120131454",
+    "timestamp": "2025-11-20T13:14:54.212235",
+    "duration": 69.96,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251120141529",
+    "timestamp": "2025-11-20T14:15:29.742362",
+    "duration": 73.24,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251121162046",
+    "timestamp": "2025-11-21T16:20:46.709894",
+    "duration": 75.68,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251121201054",
+    "timestamp": "2025-11-21T20:10:54.029120",
+    "duration": 71.91,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251121213054",
+    "timestamp": "2025-11-21T21:30:54.470017",
+    "duration": 0.0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251121213129",
+    "timestamp": "2025-11-21T21:31:29.097737",
+    "duration": 0.0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 45,
+    "failed_tests": [],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251121215317",
+    "timestamp": "2025-11-21T21:53:17.001018",
+    "duration": 1183.2,
+    "passed": 17,
+    "failed": 0,
+    "skipped": 28,
+    "failed_tests": [],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251121232721",
+    "timestamp": "2025-11-21T23:27:21.679840",
+    "duration": 1137.79,
+    "passed": 17,
+    "failed": 0,
+    "skipped": 28,
+    "failed_tests": [],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251122072917",
+    "timestamp": "2025-11-22T07:29:17.637267",
+    "duration": 0.18,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 45,
+    "failed_tests": [],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251122153553",
+    "timestamp": "2025-11-22T15:35:53.134346",
+    "duration": 299.97,
+    "passed": 23,
+    "failed": 1,
+    "skipped": 21,
+    "failed_tests": [
+      "Add and remove dynamic elements"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251124162031",
+    "timestamp": "2025-11-24T16:20:31.484712",
+    "duration": 71.91,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124162513",
+    "timestamp": "2025-11-24T16:25:13.925643",
+    "duration": 68.33,
+    "passed": 1,
+    "failed": 1,
+    "skipped": 2,
+    "failed_tests": [
+      "Auto Draft Scenario 1"
+    ],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124190207",
+    "timestamp": "2025-11-24T19:02:07.840920",
+    "duration": 47.47,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124190551",
+    "timestamp": "2025-11-24T19:05:51.555604",
+    "duration": 48.72,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124190842",
+    "timestamp": "2025-11-24T19:08:42.836353",
+    "duration": 49.64,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124202145",
+    "timestamp": "2025-11-24T20:21:45.121505",
+    "duration": 42.04,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124202419",
+    "timestamp": "2025-11-24T20:24:19.167520",
+    "duration": 41.11,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124215038",
+    "timestamp": "2025-11-24T21:50:38.839698",
+    "duration": 42.1,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124215248",
+    "timestamp": "2025-11-24T21:52:48.918743",
+    "duration": 41.76,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124215443",
+    "timestamp": "2025-11-24T21:54:43.350871",
+    "duration": 44.8,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124215617",
+    "timestamp": "2025-11-24T21:56:17.831885",
+    "duration": 44.96,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251124215828",
+    "timestamp": "2025-11-24T21:58:28.552864",
+    "duration": 46.47,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251125085453",
+    "timestamp": "2025-11-25T08:54:53.293170",
+    "duration": 46.26,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251125094835",
+    "timestamp": "2025-11-25T09:48:35.595096",
+    "duration": 259.93,
+    "passed": 23,
+    "failed": 22,
+    "skipped": 0,
+    "failed_tests": [
+      "Manual Testing Lab pricing calculator",
+      "Manual Testing Lab blur effects",
+      "Manual Testing Lab format validation",
+      "Add and remove dynamic elements",
+      "Trigger basic authentication simulation",
+      "Interact with dynamic table actions",
+      "Toggle dynamic checkbox visibility",
+      "Enable/Disable dynamic input",
+      "Download sample file",
+      "Upload file via input",
+      "Login with valid credentials",
+      "Switch between iframe contexts",
+      "Adjust slider value",
+      "Open and switch to new window",
+      "Sort table by Last Name",
+      "Sort table by First Name",
+      "Edit content in TinyMCE editor",
+      "Calculate total with pricing inputs",
+      "Apply blur effects to text",
+      "Validate input formats",
+      "Apply grid layout settings",
+      "Apply visual theme settings"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251125100310",
+    "timestamp": "2025-11-25T10:03:10.685290",
+    "duration": 264.31,
+    "passed": 23,
+    "failed": 22,
+    "skipped": 0,
+    "failed_tests": [
+      "Manual Testing Lab pricing calculator",
+      "Manual Testing Lab blur effects",
+      "Manual Testing Lab format validation",
+      "Add and remove dynamic elements",
+      "Trigger basic authentication simulation",
+      "Interact with dynamic table actions",
+      "Toggle dynamic checkbox visibility",
+      "Enable/Disable dynamic input",
+      "Download sample file",
+      "Upload file via input",
+      "Login with valid credentials",
+      "Switch between iframe contexts",
+      "Adjust slider value",
+      "Open and switch to new window",
+      "Sort table by Last Name",
+      "Sort table by First Name",
+      "Edit content in TinyMCE editor",
+      "Calculate total with pricing inputs",
+      "Apply blur effects to text",
+      "Validate input formats",
+      "Apply grid layout settings",
+      "Apply visual theme settings"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251125102908",
+    "timestamp": "2025-11-25T10:29:08.284953",
+    "duration": 270.28,
+    "passed": 23,
+    "failed": 22,
+    "skipped": 0,
+    "failed_tests": [
+      "Manual Testing Lab pricing calculator",
+      "Manual Testing Lab blur effects",
+      "Manual Testing Lab format validation",
+      "Add and remove dynamic elements",
+      "Trigger basic authentication simulation",
+      "Interact with dynamic table actions",
+      "Toggle dynamic checkbox visibility",
+      "Enable/Disable dynamic input",
+      "Download sample file",
+      "Upload file via input",
+      "Login with valid credentials",
+      "Switch between iframe contexts",
+      "Adjust slider value",
+      "Open and switch to new window",
+      "Sort table by Last Name",
+      "Sort table by First Name",
+      "Edit content in TinyMCE editor",
+      "Calculate total with pricing inputs",
+      "Apply blur effects to text",
+      "Validate input formats",
+      "Apply grid layout settings",
+      "Apply visual theme settings"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251125114834",
+    "timestamp": "2025-11-25T11:48:34.509394",
+    "duration": 0.0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 45,
+    "failed_tests": [],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251125120934",
+    "timestamp": "2025-11-25T12:09:34.592428",
+    "duration": 267.36,
+    "passed": 18,
+    "failed": 22,
+    "skipped": 5,
+    "failed_tests": [
+      "Manual Testing Lab pricing calculator",
+      "Manual Testing Lab blur effects",
+      "Manual Testing Lab format validation",
+      "Add and remove dynamic elements",
+      "Trigger basic authentication simulation",
+      "Interact with dynamic table actions",
+      "Toggle dynamic checkbox visibility",
+      "Enable/Disable dynamic input",
+      "Download sample file",
+      "Upload file via input",
+      "Login with valid credentials",
+      "Switch between iframe contexts",
+      "Adjust slider value",
+      "Open and switch to new window",
+      "Sort table by Last Name",
+      "Sort table by First Name",
+      "Edit content in TinyMCE editor",
+      "Calculate total with pricing inputs",
+      "Apply blur effects to text",
+      "Validate input formats",
+      "Apply grid layout settings",
+      "Apply visual theme settings"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251126101231",
+    "timestamp": "2025-11-26T10:12:31.740202",
+    "duration": 277.0,
+    "passed": 23,
+    "failed": 22,
+    "skipped": 0,
+    "failed_tests": [
+      "Manual Testing Lab pricing calculator",
+      "Manual Testing Lab blur effects",
+      "Manual Testing Lab format validation",
+      "Add and remove dynamic elements",
+      "Trigger basic authentication simulation",
+      "Interact with dynamic table actions",
+      "Toggle dynamic checkbox visibility",
+      "Enable/Disable dynamic input",
+      "Download sample file",
+      "Upload file via input",
+      "Login with valid credentials",
+      "Switch between iframe contexts",
+      "Adjust slider value",
+      "Open and switch to new window",
+      "Sort table by Last Name",
+      "Sort table by First Name",
+      "Edit content in TinyMCE editor",
+      "Calculate total with pricing inputs",
+      "Apply blur effects to text",
+      "Validate input formats",
+      "Apply grid layout settings",
+      "Apply visual theme settings"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251126104008",
+    "timestamp": "2025-11-26T10:40:08.887982",
+    "duration": 316.63,
+    "passed": 28,
+    "failed": 17,
+    "skipped": 0,
+    "failed_tests": [
+      "Manual Testing Lab pricing calculator",
+      "Manual Testing Lab blur effects",
+      "Manual Testing Lab format validation",
+      "Trigger basic authentication simulation",
+      "Interact with dynamic table actions",
+      "Toggle dynamic checkbox visibility",
+      "Enable/Disable dynamic input",
+      "Login with valid credentials",
+      "Open and switch to new window",
+      "Sort table by Last Name",
+      "Sort table by First Name",
+      "Edit content in TinyMCE editor",
+      "Calculate total with pricing inputs",
+      "Apply blur effects to text",
+      "Validate input formats",
+      "Apply grid layout settings",
+      "Apply visual theme settings"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251201120645",
+    "timestamp": "2025-12-01T12:06:45.754210",
+    "duration": 42.28,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251201132541",
+    "timestamp": "2025-12-01T13:25:41.060255",
+    "duration": 97.35,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251201133217",
+    "timestamp": "2025-12-01T13:32:17.117624",
+    "duration": 92.47,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251201135515",
+    "timestamp": "2025-12-01T13:55:15.373317",
+    "duration": 310.07,
+    "passed": 30,
+    "failed": 15,
+    "skipped": 0,
+    "failed_tests": [
+      "Manual Testing Lab pricing calculator",
+      "Manual Testing Lab blur effects",
+      "Manual Testing Lab format validation",
+      "Trigger basic authentication simulation",
+      "Interact with dynamic table actions",
+      "Toggle dynamic checkbox visibility",
+      "Enable/Disable dynamic input",
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name",
+      "Calculate total with pricing inputs",
+      "Apply blur effects to text",
+      "Validate input formats",
+      "Apply grid layout settings",
+      "Apply visual theme settings"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251202111916",
+    "timestamp": "2025-12-02T11:19:16.851959",
+    "duration": 289.78,
+    "passed": 33,
+    "failed": 12,
+    "skipped": 0,
+    "failed_tests": [
+      "Manual Testing Lab pricing calculator",
+      "Manual Testing Lab blur effects",
+      "Manual Testing Lab format validation",
+      "Interact with dynamic table actions",
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name",
+      "Calculate total with pricing inputs",
+      "Apply blur effects to text",
+      "Validate input formats",
+      "Apply grid layout settings",
+      "Apply visual theme settings"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251205103827",
+    "timestamp": "2025-12-05T10:38:27.544889",
+    "duration": 91.81,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251205104258",
+    "timestamp": "2025-12-05T10:42:58.537519",
+    "duration": 91.52,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251205125540",
+    "timestamp": "2025-12-05T12:55:40.474788",
+    "duration": 85.47,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251205164001",
+    "timestamp": "2025-12-05T16:40:01.658588",
+    "duration": 356.68,
+    "passed": 33,
+    "failed": 3,
+    "skipped": 9,
+    "failed_tests": [
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251207143847",
+    "timestamp": "2025-12-07T14:38:47.983219",
+    "duration": 91.91,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251207170607",
+    "timestamp": "2025-12-07T17:06:07.546972",
+    "duration": 327.66,
+    "passed": 33,
+    "failed": 3,
+    "skipped": 9,
+    "failed_tests": [
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251207190557",
+    "timestamp": "2025-12-07T19:05:57.504442",
+    "duration": 302.22,
+    "passed": 33,
+    "failed": 3,
+    "skipped": 9,
+    "failed_tests": [
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251208113510",
+    "timestamp": "2025-12-08T11:35:10.584900",
+    "duration": 315.15,
+    "passed": 33,
+    "failed": 3,
+    "skipped": 9,
+    "failed_tests": [
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251208115534",
+    "timestamp": "2025-12-08T11:55:34.599392",
+    "duration": 100.69,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251208120105",
+    "timestamp": "2025-12-08T12:01:05.141508",
+    "duration": 92.03,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251208120414",
+    "timestamp": "2025-12-08T12:04:14.403902",
+    "duration": 304.61,
+    "passed": 33,
+    "failed": 3,
+    "skipped": 9,
+    "failed_tests": [
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251208122926",
+    "timestamp": "2025-12-08T12:29:26.287590",
+    "duration": 294.86,
+    "passed": 33,
+    "failed": 3,
+    "skipped": 9,
+    "failed_tests": [
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251208162943",
+    "timestamp": "2025-12-08T16:29:43.558176",
+    "duration": 383.66,
+    "passed": 33,
+    "failed": 3,
+    "skipped": 9,
+    "failed_tests": [
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251208175036",
+    "timestamp": "2025-12-08T17:50:36.702672",
+    "duration": 264.96,
+    "passed": 30,
+    "failed": 3,
+    "skipped": 12,
+    "failed_tests": [
+      "Login with valid credentials",
+      "Sort table by Last Name",
+      "Sort table by First Name"
+    ],
+    "project": "auto_completion_projcet"
+  },
+  {
+    "run_id": "20251208220745",
+    "timestamp": "2025-12-08T22:07:45.241598",
+    "duration": 98.01,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251209112734",
+    "timestamp": "2025-12-09T11:27:34.673754",
+    "duration": 95.08,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251209144732",
+    "timestamp": "2025-12-09T14:47:32.861916",
+    "duration": 102.79,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20251210122434",
+    "timestamp": "2025-12-10T12:24:34.305105",
+    "duration": 104.19,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "failed_tests": [],
+    "project": "saucedemo"
+  },
+  {
+    "run_id": "20260401145112",
+    "timestamp": "2026-04-01T14:51:12.057868",
+    "duration": 19.01,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1,
+    "failed_tests": [],
+    "project": "core"
   }
 ]

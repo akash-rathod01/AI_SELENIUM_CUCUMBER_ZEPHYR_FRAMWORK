@@ -1,0 +1,47 @@
+Zephyr Integration Checklist
+
+What exact Zephyr product/edition do you own (Zephyr Scale, Squad, or Enterprise)?
+
+Where is it hosted (Jira Cloud/Data Center, on-prem server)? Do we get URL and API access?
+
+If it’s Jira-based, can we get Jira accounts/API tokens and confirm the project key that holds the tests?
+
+Do you author Gherkin inside Zephyr or keep the feature files solely in Git? How do you want changes synchronized?
+
+Which test-cycle or test-plan structure should automation report into, and how are environments handled?
+
+What automation result format does Zephyr expect (Cucumber JSON, JUnit XML, etc.) and which API endpoints should we use?
+
+Are Zephyr test cases already tagged with IDs we can reference in feature files (e.g., @TestCaseKey=XYZ)?
+
+Do you need additional evidence (screenshots, logs) uploaded back to Zephyr with each execution?
+
+How frequently should we push automation results to Zephyr, and who monitors failed executions?
+
+Are there approval or review workflows in Zephyr we must respect when creating/updating test cases or executions?
+
+..............................................................................................
+
+Discovery Phase :
+
+Application scope – Which Equifax products/modules must we cover first, and what browsers/devices do they support today and on the roadmap?
+
+Test ownership – Who authors Gherkin scenarios versus step code? Do BA/QA teams contribute scenarios, or is automation responsible for curating them?
+Test data – How do we provision/manage data (synthetic vs. production-like, masking rules, refresh cadence, multi-environment consistency)?
+
+Infrastructure – Are we expected to run on local WebDrivers, Selenium Grid, cloud providers (BrowserStack, Sauce Labs), or an internal containerized solution?
+CI/CD integration – Which pipelines (Jenkins, Azure DevOps, GitHub Actions, etc.) must trigger the suite? What gating rules define success/failure for deployments?
+Reporting – Besides Zephyr, what dashboards or notifications (Splunk, email, Slack, ServiceNow) do stakeholders expect after every execution?
+Security/compliance – Any hard requirements around secrets management, audit trails, or penetration-test coverage that influence the framework design?
+Standards & versioning – Preferred coding conventions, branching strategy, dependency pinning, Python version targets, browser version support matrix?
+Performance/reliability goals – SLAs for run duration, pass-rate thresholds, frequency (daily smoke vs. full regression), resilience needs (self-healing, retries)?
+Maintenance model – Who will maintain locators and environments long-term, how are change requests prioritized, and what budget/time is allocated for upkeep?
+Access/interfaces – Required integrations with internal APIs, databases, service stubs, or external systems (credit bureaus, payment gateways) to simulate flows?
+Test coverage strategy – What’s the desired balance between end-to-end UI, API, and component tests; are we expected to orchestrate lower-level suites too?
+Environment parity – How many environments (dev, QA, UAT, prod mirror) must automation handle, and are credentials/configs standardized via .env or secrets vaults?
+Zephyr workflows – Expectations for linking executions, managing traceability, and aligning defect workflows between Zephyr/Jira and this automation?
+Support expectations – On-call rotation, troubleshooting SLAs, documentation requirements, handover plans for future teams?
+Budget & tooling – Are there constraints on using paid add-ons (AI-assisted maintenance, visual testing, parallel execution services)?
+Expansion plan – Anticipated future integrations (API testing, mobile, accessibility, performance), so we can architect extensibility from the start.
+These questions frame both the immediate build and the long-term responsibilities, ensuring the framework aligns with Equifax enterprise standards and that your role is clearly defined.
+

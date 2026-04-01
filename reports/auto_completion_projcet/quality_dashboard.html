@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Auto Completion Quality Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f6fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.12);
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      padding: 32px;
+      color: var(--text);
+    }
+    h1 {
+      margin-bottom: 4px;
+      font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .panel {
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .status-pill.passed { background: rgba(34,197,94,0.15); color: #047857; }
+    .status-pill.failed { background: rgba(239,68,68,0.15); color: #dc2626; }
+    .status-pill.skipped { background: rgba(234,179,8,0.2); color: #b45309; }
+    .side-metrics {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .metric-card {
+      padding: 16px;
+      background: var(--panel);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .metric-card h3 {
+      margin: 0 0 4px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .metric-card .value {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    .small-text {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .chart-wrap {
+      height: 240px;
+      position: relative;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .scroll-area {
+      max-height: 240px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <header style="margin-bottom:24px;">
+    <h1>Auto Completion QA Dashboard</h1>
+    <p class="small-text">Realtime quality view for https://dotesthere.com/. Updated <span id="generatedAt"></span>.</p>
+  </header>
+  <div class="grid">
+    <section class="panel" style="grid-column: span 2;">
+      <h2 style="margin-bottom:12px;">Critical Scenario Watchlist</h2>
+      <div class="scroll-area">
+        <table id="failedTable"></table>
+      </div>
+    </section>
+    <aside style="display:flex; flex-direction:column; gap:16px;">
+      <div class="panel">
+        <h2 style="margin-bottom:12px;">Execution Snapshot</h2>
+        <div class="side-metrics">
+          <div class="metric-card">
+            <h3>Total Scenarios</h3>
+            <div class="value" id="metricTotal">0</div>
+          </div>
+          <div class="metric-card">
+            <h3>Passed</h3>
+            <div class="value" id="metricPassed">0</div>
+          </div>
+          <div class="metric-card">
+            <h3>Failed</h3>
+            <div class="value" id="metricFailed">0</div>
+          </div>
+          <div class="metric-card">
+            <h3>Skipped</h3>
+            <div class="value" id="metricSkipped">0</div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <h2 style="margin-bottom:12px;">Latest Run</h2>
+        <p class="small-text" id="latestRun">No historical data</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="grid" style="margin-top:24px;">
+    <section class="panel">
+      <h2 style="margin-bottom:12px;">Status Distribution</h2>
+      <div class="chart-wrap"><canvas id="statusChart"></canvas></div>
+    </section>
+    <section class="panel">
+      <h2 style="margin-bottom:12px;">Feature Health</h2>
+      <div class="chart-wrap"><canvas id="featureChart"></canvas></div>
+    </section>
+    <section class="panel">
+      <h2 style="margin-bottom:12px;">Slowest Executions</h2>
+      <table id="slowTable"></table>
+    </section>
+  </div>
+
+  <div class="panel" style="margin-top:24px;">
+    <h2 style="margin-bottom:12px;">Run History</h2>
+    <div class="chart-wrap"><canvas id="historyChart"></canvas></div>
+  </div>
+
+<script>
+  const data = {
+  "generated_at": "2025-11-25T12:10:51.076136",
+  "project": "auto_completion_projcet",
+  "summary": {
+    "total_scenarios": 45,
+    "passed": 18,
+    "failed": 27,
+    "skipped": 0,
+    "latest_run": {
+      "run_id": "20251125120934",
+      "timestamp": "2025-11-25T12:09:34.592428",
+      "passed": 18,
+      "failed": 22,
+      "skipped": 5
+    }
+  },
+  "failed_scenarios": [
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Interact with dynamic table actions",
+      "status": "failed",
+      "duration": 30.68,
+      "failed_step": "the user clicks Edit button for first row",
+      "error": "Traceback (most recent call last):\n  File \"D:\\VisualStudio_Projects\\ai_selenium_CucumberBDD_Zephyr_framework\\pages\\dotesthere_page.py\", line 259, in click_challenging_table_action\n    button = self.wait.until(EC.element_to_be_clickable(locator))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Sort table by Last Name",
+      "status": "failed",
+      "duration": 16.12,
+      "failed_step": "the user clicks Last Name header",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 511, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Sort table by First Name",
+      "status": "failed",
+      "duration": 15.92,
+      "failed_step": "the user clicks First Name header",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 511, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Open and switch to new window",
+      "status": "failed",
+      "duration": 15.67,
+      "failed_step": "the user clicks Click Here button",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 470, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Edit content in TinyMCE editor",
+      "status": "failed",
+      "duration": 15.64,
+      "failed_step": "the user types Sample Test Content",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 526, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Enable/Disable dynamic input",
+      "status": "failed",
+      "duration": 15.63,
+      "failed_step": "the user clicks Enable/Disable button",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 269, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Toggle dynamic checkbox visibility",
+      "status": "failed",
+      "duration": 15.54,
+      "failed_step": "the user clicks Add/Remove button",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 261, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Trigger basic authentication simulation",
+      "status": "failed",
+      "duration": 15.54,
+      "failed_step": "the user clicks Authenticate button",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 143, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Download sample file",
+      "status": "failed",
+      "duration": 15.51,
+      "failed_step": "the user navigates to File Download module",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 67, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Adjust slider value",
+      "status": "failed",
+      "duration": 15.34,
+      "failed_step": "the user navigates to Horizontal Slider module",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 83, in step_impl"
+    }
+  ],
+  "feature_breakdown": {
+    "labels": [
+      "Auto Completion project smoke skeleton",
+      "DoTestHere smoke coverage",
+      "DoTestHere.com - Complete Module Testing Coverage"
+    ],
+    "passed": [
+      1,
+      1,
+      16
+    ],
+    "failed": [
+      0,
+      7,
+      20
+    ],
+    "skipped": [
+      0,
+      0,
+      0
+    ]
+  },
+  "status_counts": {
+    "passed": 18,
+    "failed": 27,
+    "skipped": 0
+  },
+  "run_timeline": [
+    {
+      "run_id": "20251125120934",
+      "timestamp": "2025-11-25T12:09:34.592428",
+      "passed": 18,
+      "failed": 22,
+      "skipped": 5
+    },
+    {
+      "run_id": "20251125114834",
+      "timestamp": "2025-11-25T11:48:34.509394",
+      "passed": 0,
+      "failed": 0,
+      "skipped": 45
+    },
+    {
+      "run_id": "20251125102908",
+      "timestamp": "2025-11-25T10:29:08.284953",
+      "passed": 23,
+      "failed": 22,
+      "skipped": 0
+    },
+    {
+      "run_id": "20251125100310",
+      "timestamp": "2025-11-25T10:03:10.685290",
+      "passed": 23,
+      "failed": 22,
+      "skipped": 0
+    },
+    {
+      "run_id": "20251125094835",
+      "timestamp": "2025-11-25T09:48:35.595096",
+      "passed": 23,
+      "failed": 22,
+      "skipped": 0
+    },
+    {
+      "run_id": "20251122153553",
+      "timestamp": "2025-11-22T15:35:53.134346",
+      "passed": 23,
+      "failed": 1,
+      "skipped": 21
+    },
+    {
+      "run_id": "20251122072917",
+      "timestamp": "2025-11-22T07:29:17.637267",
+      "passed": 0,
+      "failed": 0,
+      "skipped": 45
+    },
+    {
+      "run_id": "20251121232721",
+      "timestamp": "2025-11-21T23:27:21.679840",
+      "passed": 17,
+      "failed": 0,
+      "skipped": 28
+    },
+    {
+      "run_id": "20251121215317",
+      "timestamp": "2025-11-21T21:53:17.001018",
+      "passed": 17,
+      "failed": 0,
+      "skipped": 28
+    },
+    {
+      "run_id": "20251121213129",
+      "timestamp": "2025-11-21T21:31:29.097737",
+      "passed": 0,
+      "failed": 0,
+      "skipped": 45
+    }
+  ],
+  "slowest": [
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Interact with dynamic table actions",
+      "status": "failed",
+      "duration": 30.68,
+      "failed_step": "the user clicks Edit button for first row",
+      "error": "Traceback (most recent call last):\n  File \"D:\\VisualStudio_Projects\\ai_selenium_CucumberBDD_Zephyr_framework\\pages\\dotesthere_page.py\", line 259, in click_challenging_table_action\n    button = self.wait.until(EC.element_to_be_clickable(locator))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Hover over figure elements",
+      "status": "passed",
+      "duration": 16.7,
+      "failed_step": null,
+      "error": null
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Sort table by Last Name",
+      "status": "failed",
+      "duration": 16.12,
+      "failed_step": "the user clicks Last Name header",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 511, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Sort table by First Name",
+      "status": "failed",
+      "duration": 15.92,
+      "failed_step": "the user clicks First Name header",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 511, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Open and switch to new window",
+      "status": "failed",
+      "duration": 15.67,
+      "failed_step": "the user clicks Click Here button",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 470, in step_impl"
+    },
+    {
+      "feature": "DoTestHere.com - Complete Module Testing Coverage",
+      "name": "Edit content in TinyMCE editor",
+      "status": "failed",
+      "duration": 15.64,
+      "failed_step": "the user types Sample Test Content",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"C:\\Users\\Akash\\AppData\\Local\\Programs\\Python\\Python311-32\\Lib\\site-packages\\behave\\matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"projects\\auto_completion_projcet\\features\\steps\\dotesthere_modules_steps.py\", line 526, in step_impl"
+    }
+  ]
+};
+
+  const setStatusPill = (status) => {
+    const base = document.createElement('span');
+    base.className = `status-pill ${status}`;
+    base.textContent = status.charAt(0).toUpperCase() + status.slice(1);
+    return base.outerHTML;
+  };
+
+  document.getElementById('generatedAt').textContent = new Date(data.generated_at).toLocaleString();
+  document.getElementById('metricTotal').textContent = data.summary.total_scenarios;
+  document.getElementById('metricPassed').textContent = data.summary.passed;
+  document.getElementById('metricFailed').textContent = data.summary.failed;
+  document.getElementById('metricSkipped').textContent = data.summary.skipped;
+
+  if (data.summary.latest_run) {
+    const run = data.summary.latest_run;
+    const ts = new Date(run.timestamp).toLocaleString();
+    document.getElementById('latestRun').innerHTML = `Run ${run.run_id} on ${ts}<br>Passed: ${run.passed} · Failed: ${run.failed} · Skipped: ${run.skipped}`;
+  }
+
+  const failedTable = document.getElementById('failedTable');
+  if (data.failed_scenarios.length) {
+    const header = `<tr><th>Scenario</th><th>Feature</th><th>Status</th><th>Duration (s)</th></tr>`;
+    const rows = data.failed_scenarios.map(item => {
+      return `<tr><td>${item.name}</td><td>${item.feature}</td><td>${setStatusPill('failed')}</td><td>${item.duration}</td></tr>`;
+    }).join('');
+    failedTable.innerHTML = header + rows;
+  } else {
+    failedTable.innerHTML = '<tr><td>No failed scenarios</td></tr>';
+  }
+
+  const slowTable = document.getElementById('slowTable');
+  if (data.slowest.length) {
+    const header = `<tr><th>Scenario</th><th>Feature</th><th>Duration (s)</th><th>Status</th></tr>`;
+    const rows = data.slowest.map(item => {
+      return `<tr><td>${item.name}</td><td>${item.feature}</td><td>${item.duration}</td><td>${setStatusPill(item.status)}</td></tr>`;
+    }).join('');
+    slowTable.innerHTML = header + rows;
+  } else {
+    slowTable.innerHTML = '<tr><td>No recent runs</td></tr>';
+  }
+
+  const statusCtx = document.getElementById('statusChart');
+  const statusData = {
+    labels: ['Passed', 'Failed', 'Skipped'],
+    datasets: [{
+      label: 'Scenarios',
+      data: [data.status_counts.passed || 0, data.status_counts.failed || 0, data.status_counts.skipped || 0],
+      backgroundColor: ['#10b981', '#ef4444', '#facc15']
+    }]
+  };
+  new Chart(statusCtx, { type: 'doughnut', data: statusData, options: { plugins: { legend: { position: 'bottom' } } } });
+
+  const featureCtx = document.getElementById('featureChart');
+  new Chart(featureCtx, {
+    type: 'bar',
+    data: {
+      labels: data.feature_breakdown.labels,
+      datasets: [
+        { label: 'Passed', data: data.feature_breakdown.passed, backgroundColor: '#10b981' },
+        { label: 'Failed', data: data.feature_breakdown.failed, backgroundColor: '#ef4444' },
+        { label: 'Skipped', data: data.feature_breakdown.skipped, backgroundColor: '#f59e0b' }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: { stacked: true },
+        y: { stacked: true, beginAtZero: true }
+      }
+    }
+  });
+
+  const historyCtx = document.getElementById('historyChart');
+  const historyLabels = data.run_timeline.map(item => item.run_id).reverse();
+  const passData = data.run_timeline.map(item => item.passed).reverse();
+  const failData = data.run_timeline.map(item => item.failed).reverse();
+  new Chart(historyCtx, {
+    type: 'line',
+    data: {
+      labels: historyLabels,
+      datasets: [
+        { label: 'Passed', data: passData, borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.15)', tension: 0.3, fill: true },
+        { label: 'Failed', data: failData, borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,0.15)', tension: 0.3, fill: true }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom' } }
+    }
+  });
+</script>
+</body>
+</html>

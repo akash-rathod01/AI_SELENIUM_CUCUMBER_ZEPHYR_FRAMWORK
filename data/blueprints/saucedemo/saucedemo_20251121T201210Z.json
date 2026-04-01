@@ -1,0 +1,25 @@
+{
+  "started_at": 1763755930.3963618,
+  "seed": "https://www.saucedemo.com",
+  "visited_count": 1,
+  "broken_links": {},
+  "pages": {
+    "https://www.saucedemo.com": {
+      "url": "https://www.saucedemo.com",
+      "depth": 0,
+      "title": "Swag Labs",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "links": [],
+      "forms": [],
+      "meta": {
+        "robots": "noindex",
+        "viewport": "width=device-width,initial-scale=1",
+        "theme-color": "#ffffff",
+        "description": "Sauce Labs Swag Labs app"
+      }
+    }
+  },
+  "project": "saucedemo",
+  "generated_at": "2025-11-21T20:12:10.396361Z"
+}

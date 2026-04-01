@@ -40,7 +40,7 @@ class ReportManager:
         """Invoke Allure CLI if available to create a rich HTML dashboard."""
 
         if not self.allure_results_dir.exists():
-            logger.warning("Allure results directory missing", path=str(self.allure_results_dir))
+            logger.warning(f"Allure results directory missing: {self.allure_results_dir}")
             return
 
         allure_cli = shutil.which("allure")
@@ -57,18 +57,20 @@ class ReportManager:
             str(self.allure_report_dir),
         ]
 
-        logger.info("Generating Allure report", command=" ".join(command))
+        logger.info(f"Generating Allure report with command: {' '.join(command)}")
         try:
             subprocess.run(command, check=True, capture_output=True)
         except subprocess.CalledProcessError as exc:  # pragma: no cover - external tool
-            logger.error("Allure report generation failed", stderr=exc.stderr.decode(errors="ignore"))
+            logger.error(
+                f"Allure report generation failed: {exc.stderr.decode(errors='ignore')}"
+            )
 
     def build_html_summary(self, summary: Dict) -> Path:
         """Render a lightweight HTML summary for quick sharing."""
 
         html = self._render_summary_html(summary)
         self.html_report_path.write_text(html, encoding="utf-8")
-        logger.info("HTML summary written", path=str(self.html_report_path))
+        logger.info(f"HTML summary written to {self.html_report_path}")
         return self.html_report_path
 
     def archive_artifacts(self, extra_files: Iterable[Path] | None = None) -> Path:
@@ -88,7 +90,7 @@ class ReportManager:
                             bundle.write(path, path.relative_to(item.parent))
                 elif item.exists():
                     bundle.write(item, item.name)
-        logger.info("Packaged report artifacts", archive=str(self.archive_path))
+        logger.info(f"Packaged report artifacts into {self.archive_path}")
         return self.archive_path
 
     def _render_summary_html(self, summary: Dict) -> str:

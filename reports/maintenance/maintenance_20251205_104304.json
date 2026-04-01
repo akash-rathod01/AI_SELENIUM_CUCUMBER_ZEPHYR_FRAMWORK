@@ -1,0 +1,51 @@
+{
+  "generated_at": "2025-12-05T10:43:04.640050Z",
+  "project": "saucedemo",
+  "run_summary": {
+    "generated_at": "2025-12-05T10:42:58.537519",
+    "total_features": 3,
+    "total_scenarios": 4,
+    "duration_seconds": 91.52,
+    "scenarios": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "steps": {
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0
+    },
+    "failed_scenarios": [],
+    "return_code": 0,
+    "project": "saucedemo",
+    "project_name": "Saucedemo Checkout"
+  },
+  "anomaly_candidates": [],
+  "flaky_tests": [],
+  "retry_recommendations": [],
+  "locator_health": [],
+  "link_diagnostics": {
+    "https://dotesthere.com": {
+      "broken_links": {},
+      "errors": {},
+      "statistics": {
+        "pages_scanned": 4,
+        "forms_detected": 8,
+        "broken_link_count": 0,
+        "max_depth_reached": 1,
+        "unique_domains": [
+          "dotesthere.com"
+        ],
+        "average_links_per_page": 3.75
+      }
+    }
+  },
+  "snapshot": "D:\\VisualStudio_Projects\\ai_selenium_CucumberBDD_Zephyr_framework\\snapshots\\20251205_104302_saucedemo_post_run.zip",
+  "flake_triage": {
+    "report_path": "D:\\VisualStudio_Projects\\ai_selenium_CucumberBDD_Zephyr_framework\\reports\\maintenance\\flake_triage\\flake_triage_20251205_104304.json",
+    "markdown_path": "D:\\VisualStudio_Projects\\ai_selenium_CucumberBDD_Zephyr_framework\\reports\\maintenance\\flake_triage\\flake_triage_20251205_104304.md",
+    "classification_tally": {},
+    "failure_count": 0
+  }
+}

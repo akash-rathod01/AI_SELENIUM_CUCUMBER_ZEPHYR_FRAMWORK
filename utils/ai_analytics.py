@@ -54,14 +54,14 @@ class TestRunAnalytics:
         feature_keys = feature_keys or ["duration", "failed", "skipped"]
         missing = [key for key in feature_keys if key not in df.columns]
         if missing:
-            logger.warning("Missing features for anomaly detection", missing=missing)
+            logger.warning(f"Missing features for anomaly detection: {missing}")
             return pd.DataFrame()
 
         features = df[feature_keys].fillna(0)
         model = IsolationForest(contamination=0.1, random_state=42)
         df["anomaly_score"] = model.fit_predict(features)
         anomalies = df[df["anomaly_score"] == -1]
-        logger.info("Anomaly detection completed", count=len(anomalies))
+        logger.info(f"Anomaly detection completed - count={len(anomalies)}")
         return anomalies
 
     def flaky_test_candidates(self, min_failures: int = 2):
