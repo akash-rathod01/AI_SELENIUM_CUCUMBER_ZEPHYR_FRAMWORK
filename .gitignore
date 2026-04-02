@@ -1,0 +1,69 @@
+# Security - Never commit these
+*.env
+*.env.*
+.env
+.env.local
+.env.*.local
+.secrets
+credentials.json
+config.json
+private.key
+access_token
+refresh_token
+
+# API Keys and tokens
+**/api_keys/
+**/tokens/
+**/secrets/
+**/*credentials*
+**/*password*
+**/*token*
+**/*key*
+**/auth.json
+
+# Specific patterns
+# GitHub Personal Access Tokens
+ghp_*
+# OpenAI API keys 
+sk-*
+# AWS keys
+AKIA*
+# Google API keys
+AIza*
+
+# Development
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+node_modules/
+.vscode/settings.json
+.idea/
+
+# Test results and reports
+.pytest_cache/
+allure-results/
+reports/
+test-results/
+coverage/
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python virtual environments
+venv/
+env/
+.env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
