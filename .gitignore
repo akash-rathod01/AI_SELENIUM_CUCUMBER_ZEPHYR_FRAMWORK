@@ -21,6 +21,13 @@ refresh_token
 **/*key*
 **/auth.json
 
+# Added sensitive token patterns
+*.token
+
+# Added Git ignore app patterns
+.gitignore_app/
+.gitignore_app_config/
+
 # Specific patterns
 # GitHub Personal Access Tokens
 ghp_*
@@ -48,7 +55,6 @@ allure-results/
 reports/
 test-results/
 coverage/
-*.log
 
 # OS generated files
 .DS_Store
